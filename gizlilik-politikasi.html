@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akçe – Gizlilik Politikası</title>
+<style>
+  body{font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 60px;color:#1b1d24;background:#fafafa}
+  h1{font-size:28px;margin:0 0 4px} h2{font-size:19px;margin:28px 0 6px} p,li{color:#33363f} small{color:#6b6f7a}
+  ul{padding-left:20px} code{background:#eceef3;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>Akçe – Gizlilik Politikası</h1>
+<small>Son güncelleme: 17 Ekim 2026</small>
+
+<p>Akçe; gelir-gider, kredi kartı ve birikim takibi için bir Android uygulamasıdır. Bu metin, uygulamanın hangi verileri
+nasıl işlediğini anlatır. Kısaca: <b>verilerin telefonunda, şifreli olarak tutulur; bizim bir sunucumuz yoktur ve
+analiz aracı kullanılmaz.</b> Uygulamada Google AdMob reklamları gösterilir (aşağıda 7. madde).</p>
+
+<h2>1. Telefonda tutulan veriler</h2>
+<p>Girdiğin işlemler, kartlar, bütçeler, hedefler ve birikimler yalnızca telefonunda saklanır. Bu dosya, anahtarı
+Android Keystore'da duran AES-GCM şifrelemesiyle korunur. Uygulama tam kart numarası, CVV, banka şifresi ya da PDF
+şifresi istemez ve saklamaz. Android'in otomatik yedeklemesi bu uygulama için kapalıdır.</p>
+
+<h2>2. Ekstre, fiş ve kamera</h2>
+<p>Yüklediğin kart ekstreleri (PDF) ve fiş fotoğrafları tamamen telefonunda, uygulamanın içindeki metin tanıma
+(OCR) ile okunur. Bu dosyalar hiçbir yere gönderilmez. Fiş çekmek için telefonun kendi kamera uygulaması açılır;
+Akçe'nin kamera izni yoktur.</p>
+
+<h2>3. Banka bildirimleri</h2>
+<p>Bu özellik varsayılan olarak kapalıdır. Akçe, açmak isteyip istemediğini sorar; onay vermezsen kapalı kalır.
+Özelliği açarsan Akçe, Android'in "Bildirim erişimi" izniyle gelen bildirimlere bakar. Yalnızca kartla
+harcama/iade bildirimi gibi görünenleri (banka adı + tutar) telefonunda ayrıştırır ve sana "eklensin mi?" diye sorar;
+diğer bildirimleri hemen yok sayar ve saklamaz. Bildirim içerikleri hiçbir yere gönderilmez. Özelliği ayarlardan ya
+da Android'in Bildirim erişimi ekranından istediğin zaman kapatabilirsin.</p>
+
+<h2>4. Ortak cüzdan</h2>
+<p>Bir cüzdanı başka biriyle paylaşırsan, yalnızca o cüzdanın verileri Google Firebase (Cloud Firestore) üzerinde
+saklanır. Veriler telefonda, davet kodundan türetilen bir anahtarla <b>uçtan uca şifrelenir</b> (AES-GCM); sunucuda
+yalnızca okunamayan şifreli içerik durur, davet kodu sunucuya gönderilmez. Paylaşım için Firebase anonim giriş
+kullanılır: ad, e-posta ya da telefon numarası istenmez; Firebase rastgele bir kullanıcı kimliği oluşturur. Google,
+hizmeti sağlarken bağlantı bilgilerini (ör. IP adresi) kendi
+<a href="https://firebase.google.com/support/privacy">gizlilik koşullarına</a> göre işleyebilir.
+Diğer üyelerin göreceği, senin yazdığın ad da şifreli içeriğin içindedir. Paylaşılmayan cüzdanlar buluta gitmez.</p>
+<p>Ortak cüzdandan ayrıldığında üyeliğin kaldırılır; şifreli cüzdan belgesi diğer üyeler kullanmaya devam edebilsin
+diye sunucuda kalır ve davet kodu olmadan okunamaz.</p>
+
+<h2>5. Döviz ve altın kurları</h2>
+<p>Uygulama, güncel kurları GitHub Pages üzerinde yayımlanan herkese açık bir veri dosyasından indirir. Bu istekle
+kişisel veri gönderilmez; GitHub, her web sitesinde olduğu gibi isteği yapan IP adresini görebilir. Kaynaklar: TCMB,
+MetalCharts ve kamuya açık istatistik kurumları.</p>
+
+<h2>6. Abonelik ve satın almalar</h2>
+<p>Abonelik satın alma ve yenileme tamamen Google Play üzerinden yapılır. Ödeme bilgilerin Akçe'ye ulaşmaz; uygulama
+yalnızca Google Play'in telefondaki satın alma listesinden aboneliğinin etkin olup olmadığını öğrenir.</p>
+
+<h2>7. Reklamlar</h2>
+<p>Yalnızca bir işlem yaptığın anlarda (yeni işlem eklediğinde, ekstre ya da fiş okuturken) zaman zaman tam ekran
+reklam gösterilir; uygulamada gezinirken reklam çıkmaz. Reklamlar Google AdMob tarafından sunulur.
+AdMob, reklam göstermek ve ölçmek için cihazının reklam kimliği, IP adresi, cihaz ve uygulama bilgileri gibi verileri
+toplayabilir ve kişiselleştirilmiş reklam için kullanabilir; bkz.
+<a href="https://policies.google.com/technologies/partner-sites">Google'ın iş ortağı uygulamalarındaki veri kullanımı</a>.
+<b>Girdiğin işlemler, tutarlar, kartlar ve diğer finansal bilgilerin AdMob'a ya da başka bir reklam şirketine
+gönderilmez.</b> Reklam kimliğini Android ayarlarından sıfırlayabilir ya da silebilir, kişiselleştirilmiş
+reklamları kapatabilirsin.</p>
+
+<h2>8. Bildirimler, kilit ve izinler</h2>
+<p>Uygulama ilk açılışta bildirim izni ister. İzin verirsen kart son ödemesi, düzenli gider, aylık özet ve günlük
+harcama girme hatırlatmaları telefonda kurulan yerel bildirimlerdir; hiçbir sunucudan gönderilmez ve her birini
+Hesaplar ve ayarlar › Hatırlatmalar'dan kapatabilirsin. Uygulama kilidi için Android'in biyometrik doğrulaması
+kullanılır; parmak izi ya da yüz verisi uygulamaya ulaşmaz. Akçe'nin konum, rehber, mikrofon ya da kamera izni
+yoktur.</p>
+
+<h2>9. Verilerini silme</h2>
+<p>Hesaplar ve ayarlar › "Tüm verileri sil" ya da uygulamayı kaldırmak, telefondaki tüm verileri siler. Ortak
+cüzdan için yukarıdaki 4. maddeye bak.</p>
+
+<h2>10. Değişiklikler ve iletişim</h2>
+<p>Bu politika değişirse güncel hali bu sayfada yayımlanır. Sorular için:
+<a href="mailto:information.akce@gmail.com">information.akce@gmail.com</a></p>
+</body>
+</html>
